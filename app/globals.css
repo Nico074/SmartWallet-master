@@ -1,0 +1,36 @@
+@import "tailwindcss";
+
+:root {
+  --background: #070b1a;
+  --foreground: #edf5ff;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --font-sans: var(--font-jakarta);
+}
+
+body {
+  background: radial-gradient(circle at 20% 18%, #12316b 0%, #070b1a 42%),
+    radial-gradient(circle at 85% 17%, rgba(23, 78, 177, 0.55) 0%, rgba(7, 11, 26, 0) 36%),
+    linear-gradient(180deg, #070b1a 0%, #060a1b 100%);
+  color: var(--foreground);
+  font-family: var(--font-jakarta), sans-serif;
+  min-height: 100vh;
+}
+
+.star-texture {
+  background-image: radial-gradient(1.5px 1.5px at 12% 22%, rgba(127, 205, 255, 0.45), transparent),
+    radial-gradient(1px 1px at 41% 33%, rgba(66, 155, 255, 0.42), transparent),
+    radial-gradient(1.5px 1.5px at 60% 18%, rgba(117, 199, 255, 0.39), transparent),
+    radial-gradient(1.4px 1.4px at 79% 42%, rgba(126, 173, 255, 0.45), transparent),
+    radial-gradient(1.2px 1.2px at 22% 58%, rgba(66, 155, 255, 0.35), transparent),
+    radial-gradient(1.2px 1.2px at 69% 78%, rgba(90, 163, 255, 0.34), transparent),
+    radial-gradient(1.5px 1.5px at 88% 84%, rgba(80, 170, 255, 0.45), transparent);
+}
+
+::selection {
+  background: rgba(73, 154, 255, 0.36);
+  color: #f0f8ff;
+}
