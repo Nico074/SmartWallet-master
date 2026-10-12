@@ -1,36 +1,49 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# SmartWallet
 
-## Getting Started
+A front-end concept for a personal finance web app: a landing page, login and sign-up screens, and an admin area with four modules – **Track Expenses**, **Automate Payments**, **Secure Wallets** and **Send Money**.
 
-First, run the development server:
+> **Built with AI.** I built this project with AI coding assistants (such as ChatGPT and Codex). I came up with the idea and the design direction, described what I wanted, tested the pages and directed the changes – the AI wrote most of the code. I'm not a professional developer; this project helped me understand how a modern React / Next.js front end is organised.
+
+**Status:** UI prototype – front end only, no real back end or real money.
+
+## Features
+
+- Responsive landing page (hero, features, footer)
+- Login and sign-up pages with basic form checks
+- Admin dashboard linking to four modules
+- Module pages with example data (transactions, categories, alerts…)
+
+## Built with
+
+Next.js 16 · React 19 · TypeScript · Tailwind CSS 4 · ESLint
+
+## Run it locally
+
+Requires [Node.js](https://nodejs.org) 20 or later.
 
 ```bash
+npm install
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Open http://localhost:3000
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+Other commands: `npm run build` (production build), `npm run lint` (code checks).
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## Project structure
 
-## Learn More
+```
+app/
+├── page.tsx           Landing page
+├── login/, signup/    Authentication screens
+├── features/          Features page
+└── admin/             Dashboard and the four modules
+components/            Shared parts (navbar, hero, footer, background…)
+public/                Images, icons and logo
+```
 
-To learn more about Next.js, take a look at the following resources:
+## Limitations
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+- **No real authentication:** the login only stores a flag in the browser (localStorage), and any email/password works.
+- All figures and transactions are example data written in the code.
+- No database, no payments, no bank connection.
